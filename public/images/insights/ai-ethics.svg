@@ -1,0 +1,21 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#1a1a3a" />
+  <g>
+    <!-- Balance Scale -->
+    <line x1="300" y1="100" x2="300" y2="150" stroke="#ffffff" stroke-width="3" />
+    <line x1="200" y1="150" x2="400" y2="150" stroke="#ffffff" stroke-width="3" />
+    <circle cx="300" cy="100" r="10" fill="#ffffff" />
+    
+    <!-- Scale Pans -->
+    <path d="M200,150 L230,200 L170,200 Z" fill="#4169e1" opacity="0.8" />
+    <path d="M400,150 L430,200 L370,200 Z" fill="#ff6347" opacity="0.8" />
+    
+    <!-- Items on Scale -->
+    <circle cx="200" cy="180" r="15" fill="#32cd32" opacity="0.9" />
+    <rect x="385" y="170" width="30" height="20" fill="#ffd700" opacity="0.9" />
+  </g>
+  <text x="200" y="230" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Ethics</text>
+  <text x="400" y="230" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Innovation</text>
+  <text x="300" y="60" font-family="Arial" font-size="24" fill="#ffffff" text-anchor="middle">Ethical Considerations in AI</text>
+</svg>
+

@@ -1,0 +1,21 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="300" fill="#1a1a3a" />
+  <g>
+    <!-- Transformer Architecture -->
+    <rect x="200" y="50" width="200" height="40" fill="#4169e1" opacity="0.7" rx="5" ry="5" />
+    <rect x="200" y="100" width="200" height="40" fill="#ff6347" opacity="0.7" rx="5" ry="5" />
+    <rect x="200" y="150" width="200" height="40" fill="#32cd32" opacity="0.7" rx="5" ry="5" />
+    <rect x="200" y="200" width="200" height="40" fill="#ffd700" opacity="0.7" rx="5" ry="5" />
+    
+    <!-- Connections -->
+    <line x1="300" y1="90" x2="300" y2="100" stroke="#ffffff" stroke-width="2" />
+    <line x1="300" y1="140" x2="300" y2="150" stroke="#ffffff" stroke-width="2" />
+    <line x1="300" y1="190" x2="300" y2="200" stroke="#ffffff" stroke-width="2" />
+  </g>
+  <text x="300" y="75" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Self-Attention</text>
+  <text x="300" y="125" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Feed Forward</text>
+  <text x="300" y="175" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Layer Norm</text>
+  <text x="300" y="225" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle">Output</text>
+  <text x="300" y="30" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle">Transformer Models in NLP</text>
+</svg>
+
