@@ -39,7 +39,7 @@ export const skills = [
 ];
 
 // Job titles for typing animation
-export const jobTitles = ["Data Sciene", "Data Engineering", "Machine Learning", "Analytics"];
+export const jobTitles = ["Data Science", "Data Engineering", "Machine Learning", "Analytics"];
 
 // Projects data
 export const projects: Project[] = [
