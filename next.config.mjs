@@ -1,6 +1,5 @@
 // Import site config from the JS file (not from TypeScript)
-import siteConfigModule from './site-config.js';
-const { siteConfig } = siteConfigModule;
+import { siteConfig } from './site-config.js';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
