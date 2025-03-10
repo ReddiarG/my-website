@@ -247,9 +247,9 @@ export default function Home() {
         <footer className="py-8 px-4 bg-black/70 backdrop-blur-sm">
           <div className="container mx-auto max-w-5xl text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+              {new Date().getFullYear()} {personalInfo.name}.
             </p>
-            <p className="text-gray-500 text-sm mt-2">Built with Next.js and Tailwind CSS</p>
+            <p className="text-gray-500 text-sm mt-2">Built with Next.js and Tailwind CSS using v0 by Vercel</p>
           </div>
         </footer>
       </div>

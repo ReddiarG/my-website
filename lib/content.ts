@@ -30,16 +30,16 @@ export const siteConfig = {
 
 // Skills data
 export const skills = [
+  { name: "Python, R, C/C++", color: "cyan" },
+  { name: "SQL, NoSQL & Vector databases", color: "indigo" },
+  { name: "AWS Cloud Platform", color: "orange" },
   { name: "Machine Learning", color: "blue" },
-  { name: "Data Science", color: "purple" },
-  { name: "Neural Networks", color: "indigo" },
-  { name: "Python", color: "cyan" },
-  { name: "TensorFlow", color: "orange" },
-  { name: "Computer Vision", color: "green" },
+  { name: "Data Science & Engineering", color: "purple" },
+  { name: "Statistical Modelling & Analysis", color: "green" },
 ];
 
 // Job titles for typing animation
-export const jobTitles = ["Data Scientist", "AI Specialist", "Machine Learning Engineer", "Deep Learning Researcher"];
+export const jobTitles = ["Data Sciene", "Data Engineering", "Machine Learning", "Analytics"];
 
 // Projects data
 export const projects: Project[] = [
@@ -103,16 +103,6 @@ export const insights: Insight[] = [
     image: "/images/insights/transformer-models.svg",
   },
   {
-    id: "ai-ethics",
-    title: "Ethical Considerations in AI Development",
-    summary:
-      "Exploring the ethical challenges and considerations when developing AI systems for real-world applications.",
-    url: "/insights/ai-ethics",
-    expandedContent:
-      "As AI systems become increasingly integrated into critical domains, ethical considerations must be at the forefront of development. This article examines issues of bias in training data, the importance of model transparency and explainability, and frameworks for responsible AI deployment. I discuss real-world cases where AI systems perpetuated or amplified societal biases, and propose practical approaches for ethical AI development, including diverse team composition, rigorous testing across demographic groups, and ongoing monitoring after deployment.",
-    image: "/images/insights/ai-ethics.svg",
-  },
-  {
     id: "ml-optimization",
     title: "Optimizing Machine Learning Models for Production",
     summary:
@@ -136,21 +126,21 @@ export const insights: Insight[] = [
 
 // Social links
 export const socialLinks = {
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  email: "mailto:your.email@example.com",
+  github: "https://github.com/ReddiarG",
+  linkedin: "https://www.linkedin.com/in/girivardhana-reddiar/",
+  email: "mailto:reddiarg@example.com",
   resume: "/resume.pdf",
 };
 
 // Personal info
 export const personalInfo = {
-  name: "John Doe",
-  bio: "I'm a data scientist with 5+ years of experience specializing in machine learning and artificial intelligence. Like Voyager exploring the cosmos, I navigate through vast datasets to discover insights and create impactful solutions.",
+  name: "Girivardhana Reddiar",
+  bio: "I'm a data enthusiast, currently pursuing a Data Science (MS) program, with 3+ years of experience specializing in designing & implimenting data engineering solutions. Like the Voyager exploring the cosmos, I have embarked on an exciting journey, navigating through the vast universe of Data Science, AI and Machine Learning to discover insights and create impactful solutions.",
 };
 
 // Navigation sections
 export const navigationSections = [
   { id: "about", label: "About" },
   { id: "projects", label: "Projects" },
-  { id: "insights", label: "Insights" },
+  { id: "insights", label: "Thoughts & Insights" },
 ];
