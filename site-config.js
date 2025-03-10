@@ -5,7 +5,7 @@
 export const siteConfig = {
     title: "John Doe | Data Scientist & AI Specialist",
     description: "Personal portfolio showcasing data science, AI, and machine learning projects and insights.",
-    url: "https://yourusername.github.io/portfolio",
-    basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+    url: "https://reddiarg.github.io/my-website",
+    basePath: process.env.NODE_ENV === 'production' ? '/my-website' : '',
   };
   
