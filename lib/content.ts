@@ -45,14 +45,20 @@ export const jobTitles = ["Data Science", "Data Engineering", "Machine Learning"
 export const projects: Project[] = [
   {
     id: "sentiment-analysis",
-    title: "Sentiment Analysis Tool",
+    title: "S&P 500 Company Removal Prediction",
     description:
-      "A machine learning model that analyzes customer reviews to determine sentiment and extract key insights.",
-    technologies: ["Python", "TensorFlow", "NLTK", "Flask"],
+      "Predicting S&P 500 Company Removals using Machine Learning algorithms.",
+    technologies: ["Python", "Scikit-Learn", "Logistic Regression", "Support Vector Machines (SVM)", "Hyperparameter Tuning"],
     githubUrl: "https://github.com/yourusername/sentiment-analysis",
     demoUrl: "https://demo-sentiment.example.com",
     expandedContent:
-      "This sentiment analysis tool uses deep learning to identify positive, negative, and neutral sentiments in text. Built with TensorFlow and NLTK, it achieved 92% accuracy on benchmark datasets. The model was trained on a dataset of 100,000 customer reviews across various industries. Features include multi-language support, real-time analysis, and visualization of sentiment trends over time.",
+      "This project predicts the likelihood of a company being removed from the S&P 500 index using machine learning. Timely identification of at-risk companies can help investors and analysts adjust portfolios, mitigate risks, and anticipate market shifts. By leveraging historical stock data and modeling techniques, the project provides a data-driven approach to understanding market dynamics. \
+      - Collected historical data of S&P 500 companies since its inception from open source Yahoo Finance API. \
+      - Performed comprehensive feature engineering to obtain a feature set that captures both short-term and long-term financial health of the stocks (price-based, fundamental, trend and lagged features). \
+      - Applied scaling techniques such as Z-score Scaling and Robust Scaling. \
+      - Trained baseline Logistic Regression Model, achieving ~85 accuracy. \
+      - Trained SVM model, achieving ~90 accuracy. \
+      - Performed hyperparameter tuning to improve the model performance, achieving ~95% accuracy. ",
     image: "/images/projects/sentiment-analysis.svg",
   },
   {
@@ -135,7 +141,11 @@ export const socialLinks = {
 // Personal info
 export const personalInfo = {
   name: "Girivardhana Reddiar",
-  bio: "I'm a data enthusiast, currently pursuing a Data Science (MS) program, with 3+ years of experience specializing in designing & implimenting data engineering solutions. Like the Voyager exploring the cosmos, I have embarked on an exciting journey, navigating through the vast universe of Data Science, AI and Machine Learning to discover insights and create impactful solutions.",
+  bio: "I'm a data enthusiast, currently pursuing a Data Science (MS) program, \
+    with 3+ years of experience specializing in designing & implimenting data engineering solutions. \
+    Like the Voyager exploring the cosmos, I have embarked on an exciting journey, \
+    navigating through the vast universe of Data Science, AI and Machine Learning \
+    to discover insights and create impactful solutions.",
 };
 
 // Navigation sections
