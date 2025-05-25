@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/mdx";
 import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text } from "@/once-ui/components";
+import { AvatarGroup, Button, Column, Flex, Heading, SmartImage, Text, SmartLink } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import { about, person, work } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
@@ -72,11 +72,19 @@ export default async function Project({
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column maxWidth="xs" gap="16">
-        <Button data-border="rounded" href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
+      <Column maxWidth="s" gap="16">
+        <Button data-border="playful" href="/work" variant="tertiary" weight="default" size="s" prefixIcon="chevronLeft">
           Projects
         </Button>
         <Heading variant="display-strong-s">{post.metadata.title}</Heading>
+        <Text wrap="balance" variant="body-default-s">{post.metadata.summary}</Text>
+        <SmartLink
+                  suffixIcon="github"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={post.metadata.link}
+                >
+                  <Text variant="body-default-s">View project</Text>
+                </SmartLink>
       </Column>
       {post.metadata.images.length > 0 && (
         <SmartImage
@@ -87,14 +95,14 @@ export default async function Project({
           src={post.metadata.images[0]}
         />
       )}
-      <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
-        <Flex gap="12" marginBottom="24" vertical="center">
+      <Column style={{ margin: "auto" }} as="article" maxWidth="s">
+        <Flex marginBottom="24" vertical="center">
           {post.metadata.team && <AvatarGroup reverse avatars={avatars} size="m" />}
-          <Text variant="body-default-s" onBackground="neutral-weak">
-            {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
+          <Text variant="body-default-s" onBackground="neutral-strong">
+            {post.metadata.publishedAt}
           </Text>
         </Flex>
-        <CustomMDX source={post.content} />
+        <CustomMDX source={post.content}/>
       </Column>
       <ScrollToHash />
     </Column>

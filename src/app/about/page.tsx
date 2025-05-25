@@ -1,11 +1,14 @@
 import {
   Avatar,
+  Badge,
   Button,
   Column,
   Flex,
   Heading,
   Icon,
   IconButton,
+  RevealFx,
+  Row,
   SmartImage,
   Tag,
   Text,
@@ -13,7 +16,7 @@ import {
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social } from "@/app/resources/content";
+import { person, about, social, home } from "@/app/resources/content";
 import React from "react";
 import { Meta, Schema } from "@/once-ui/modules";
 
@@ -66,17 +69,18 @@ export default function About() {
         }}
       />
       {about.tableOfContent.display && (
-        <Column
-          left="0"
-          style={{ top: "50%", transform: "translateY(-50%)" }}
-          position="fixed"
-          paddingLeft="24"
-          gap="32"
-          hide="s"
-        >
-          <TableOfContents structure={structure} about={about} />
-        </Column>
+          <Column
+            left="0"
+            style={{ top: "50%", transform: "translateY(-50%)" }}
+            position="fixed"
+            paddingLeft="24"
+            gap="32"
+            hide="s"
+          >
+            <TableOfContents structure={structure} about={about} />
+          </Column>
       )}
+      
       <Flex fillWidth mobileDirection="column" horizontal="center">
         {about.avatar.display && (
           <Column
@@ -138,16 +142,21 @@ export default function About() {
                 />
               </Flex>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
-              {person.name}
-            </Heading>
-            <Text
-              className={styles.textAlign}
-              variant="display-default-xs"
-              onBackground="neutral-weak"
-            >
-              {person.role}
-            </Text>
+            <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="16">
+              <Heading className={styles.textAlign} variant="display-strong-xl">
+                {person.name}
+              </Heading>
+            </RevealFx>
+            <RevealFx delay={0.2} fillWidth horizontal="start">
+              <Text
+                className={styles.textAlign}
+                variant="display-default-xs"
+                onBackground="neutral-medium"
+              >
+                {person.role}
+              </Text>
+            </RevealFx>
+            <RevealFx delay={0.2} fillWidth horizontal="start">
             {social.length > 0 && (
               <Flex className={styles.blockAlign} paddingTop="20" paddingBottom="8" gap="8" wrap horizontal="center" fitWidth data-border="rounded">
                 {social.map(
@@ -155,13 +164,15 @@ export default function About() {
                     item.link && (
                         <React.Fragment key={item.name}>
                             <Button
-                                className="s-flex-hide"
+                                // className="s-flex-hide"
                                 key={item.name}
                                 href={item.link}
                                 prefixIcon={item.icon}
                                 label={item.name}
                                 size="s"
-                                variant="secondary"
+                                variant="primary"
+                                data-border="playful"
+                                weight="default"
                             />
                             <IconButton
                                 className="s-flex-show"
@@ -176,13 +187,16 @@ export default function About() {
                 )}
               </Flex>
             )}
+            </RevealFx> 
           </Column>
-
-          {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
-              {about.intro.description}
-            </Column>
-          )}
+          <RevealFx delay={0.4} fillWidth horizontal="start">
+            {about.intro.display && (
+              <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+                {about.intro.description}
+              </Column>
+            )}
+          </RevealFx>
+          
 
           {about.work.display && (
             <>
@@ -279,36 +293,16 @@ export default function About() {
               <Column fillWidth gap="l">
                 {about.technical.skills.map((skill, index) => (
                   <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <SmartImage
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
+                    <Text variant="heading-default-l">{skill.title}</Text>
+                    
+                    <Flex wrap gap="8" paddingTop="xs">
+                      {skill.skill_badges?.map((badge, index) => (
+                        <Badge key={index} background="brand-alpha-weak" paddingX="16" paddingY="8" onBackground="neutral-strong" textVariant="label-strong-s" arrow={false}>
+                          {badge}
+                        </Badge>
+                      ))}
+                    </Flex>
+
                   </Column>
                 ))}
               </Column>

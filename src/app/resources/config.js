@@ -15,10 +15,10 @@ const protectedRoutes = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
-import { Geist } from "next/font/google";
+import { Jura } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
 
-const primaryFont = Geist({
+const primaryFont = Jura({
   variable: "--font-primary",
   subsets: ["latin"],
   display: "swap",
@@ -40,19 +40,19 @@ const font = {
 const style = {
   theme: "dark", // theme is not necessary when using ThemeProvider (default)
   neutral: "gray", // sand | gray | slate
-  brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  brand: "indigo", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+  accent: "blue", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
-  surface: "translucent", // filled | translucent
+  surface: "filled", // filled | translucent
   transition: "all", // all | micro | macro
   scaling: "100" // 90 | 95 | 100 | 105 | 110
 };
 
 const effects = {
   mask: {
-    cursor: false,
+    cursor: true,
     x: 50,
     y: 0,
     radius: 100,
@@ -70,7 +70,7 @@ const effects = {
   },
   dots: {
     display: true,
-    opacity: 40,
+    opacity: 100,
     size: "2",
     color: "brand-background-strong",
   },
@@ -78,22 +78,22 @@ const effects = {
     display: false,
     opacity: 100,
     color: "neutral-alpha-medium",
-    width: "0.25rem",
-    height: "0.25rem",
+    width: "0.50rem",
+    height: "0.50rem",
   },
   lines: {
-    display: false,
+    display: true,
     opacity: 100,
     color: "neutral-alpha-weak",
-    size: "16",
-    thickness: 1,
+    size: "32",
+    thickness: 2,
     angle: 45,
   },
 };
 
 const display = {
-  location: true,
-  time: true,
+  location: false,
+  time: false,
   themeSwitcher: true
 };
 

@@ -1,0 +1,56 @@
+---
+title: "S&P 500 Stock Removals Prediction"
+publishedAt: "November, 2024"
+summary: "Using Supervised Machine Learning, can we predict which companies are at risk of being dropped from the S&P 500 index?"
+images:
+  - "/images/projects/project-01/sp500-image-1.jpg"
+link: "https://github.com/ReddiarG/sp500-ml-project"
+---
+
+## Overview
+This project explores whether machine learning can anticipate which companies are likely to be removed from the S&P 500 index — a critical signal for investors and financial analysts. Companies are typically dropped due to declining performance, and early detection can offer valuable portfolio insights.
+
+This project combined financial analysis, data engineering, and ML interpretability, resulting in a robust early-warning tool for tracking market dynamics.
+
+## Key Concepts
+
+- **Feature Engineering**: The dataset was assembled from Wikipedia, GitHub, and Yahoo Finance APIs, covering both current and former index members. I performed comprehensive feature engineering using historical stock and fundamental data, including features like price volatility, CAGR, and estimated market cap.
+- **Scaling Techniques**: Explored Standard and Robust Scaler to avoid model bias towards high scale features. Robust Scaler was chosen due to it's resilience to extreme values.
+- **Supervised Machine Learning**: Implemented and compared binary classification models using an 80/20 train/test split.
+- **Logistic Regression**: Provided a baseline performance and with interpretable results.
+- **Support Vector Machinces (SVM)**: SVM model significantly outperformed the baseline performance, achieving strong balance across precision, recall and F1 score.
+- **Hyperparameter Tuning**: Using GridSearchCV to find optimal parameter values further improved model's classification performance.
+
+## Technologies Used
+
+<Grid
+  fillWidth
+  columns="3"
+  mobileColumns="2"
+  gap="16">
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Python</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Pandas</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>NumPy</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Scikit-learn</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Yahoo Finance API</Text>
+  </Column>
+</Grid>
+
+## Challenges and Learnings
+
+I began this project driven by my fascination with the financial markets, and the assumption that it is possible to predict the likelihood of index removals based on market conditions.
+
+One of the significant challenges was ensuring that the features employed for modeling were pertinent indicators capable of determining a stock’s likelihood of being removed from the S&P 500 index. In this project, I exclusively focused on price-based features. However, it’s important to note that there are other factors that contribute to removal from the index, such as mergers or delistings, which can lead to a company’s removal from the index regardless of its market performance.
+
+This project provided me with valuable insights into the real-world process of acquiring, preprocessing, and preparing data for machine learning applications. Additionally, it offered the opportunity to experiment with various techniques to enhance predictions, including feature scaling and hyperparameter tuning.
+
+Finally, it emphasized the significance of interpreting model outputs and translating them into tangible outcomes. While this project may not be comprehensive and may not have practical applications in the real world, it offered me hands-on experience in the machine learning project lifecycle.

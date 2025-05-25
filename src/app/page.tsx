@@ -8,6 +8,7 @@ import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
+import Head from "next/head";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -20,7 +21,7 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" horizontal="center">
+    <Column maxWidth="m" gap="l" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -38,7 +39,7 @@ export default function Home() {
         <Column maxWidth="s">
           {home.featured && (
           <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
-            <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
+            <Badge background="brand-strong" paddingX="12" paddingY="4" onBackground="accent-strong" textVariant="label-default-s" arrow={false}
               href={home.featured.href}>
               <Row paddingY="2">{home.featured.title}</Row>
             </Badge>
@@ -49,17 +50,17 @@ export default function Home() {
               {home.headline}
             </Heading>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="8">
+            <Text onBackground="neutral-strong" variant="heading-default-xl">
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
+          <RevealFx paddingTop="12" delay={0.4} horizontal="start">
             <Button
               id="about"
-              data-border="rounded"
+              data-border="playful"
               href={about.path}
-              variant="secondary"
+              variant="primary"
               size="m"
               arrowIcon
             >
@@ -77,12 +78,19 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
-      </RevealFx>
+      <Column fillWidth gap="m">
+        <RevealFx fillWidth horizontal="start" translateY="16" delay={0.6}>
+          <Heading paddingLeft="s" as="h2" variant="display-strong-xs" wrap="balance">
+            Featured Project
+          </Heading>
+        </RevealFx>
+        <RevealFx translateY="16" delay={0.6}>
+          <Projects range={[1, 1]} />
+        </RevealFx>
+      </Column>
       {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
-          <Flex flex={1} paddingLeft="l" paddingTop="24">
+          <Flex flex={1} paddingLeft="s" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
               Latest from the blog
             </Heading>
@@ -92,7 +100,6 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );

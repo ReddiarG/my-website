@@ -1,25 +1,25 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Girivardhana",
+  lastName: "Reddiar",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Data Enthusiast",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "reddiarg@gmail.com",
+  location: "America/New_York", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about technology, and share thoughts on the intersection of
+      data, engineering and analytics.
     </>
   ),
 };
@@ -28,19 +28,14 @@ const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/girivardhana-reddiar/",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
+    name: "GitHub",
+    icon: "github",
+    link: "https://github.com/ReddiarG",
   },
   {
     name: "Email",
@@ -55,16 +50,16 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Ingestion to Insights. Pipelines to Predictions.</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: <>Recent project: <strong className="ml-4">S&P 500 - Supervised ML</strong></>,
+    href: "/projects/sp500-ml-project",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Girivardhana, a data enthusiast with expertise in building scalable, cloud-native solutions across diverse industries. 
+      Passionate about using data to make an impact and explore new frontiers.
     </>
   ),
 };
@@ -72,17 +67,17 @@ const home = {
 const about = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
+  title: `More about ${person.firstName}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -90,9 +85,17 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        What excites me the most is the intersection of data, systems, and complex challenges. 
+        I enjoy taking on ambiguous problems, breaking them down, and building thoughful data-driven solutions that have an impact.
+        With a strong foundation in data engineering, I'm looking to expand my expertise into data science and machine learning.
+        <br></br>
+        <br></br>
+        I've worked in data engineering roles at a technology consulting firm, building and deploying scalable cloud-native data 
+        and analytics solutions for clients across diverse domains - Cybersecurity, Finance, Sports and Entertainment.
+        <br></br>
+        <br></br>
+        Currently pursuing a Master's program in Data Science, where I'm deeping my knowledge in Statistical Modelling, Machine Learning 
+        and AI. I apply what I learn through academic and personal projects.
       </>
     ),
   },
@@ -101,41 +104,42 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Quantiphi Inc.",
+        timeframe: "2023 - 2024",
+        role: "Senior Data Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Spearheaded design and implementation of a highly scalable data analytics platform for a sports venture, 
+            resulting in an exponential increase in analyst productivity and 70% cloud cost reduction.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Assessed a streaming data pipeline for a cybersecurity firm experiencing performance issues. 
+            Identified immediate fixes to significantly improve throughput in existing system and assisted on a future-state architecture,
+            resulting in a 6 figure long-term engagement with the client for modernization project.
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Quantiphi Inc.",
+        timeframe: "2021 - 2023",
+        role: "Data Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed cloud-agnostic migration pipeline for an NFT-based startup, successfully migrating 500+ GB of historical data
+            while minimizing long-term storage costs.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Implemented near real-time log preprocessing framework for a financial threat detection pipeline, reducing manual investigation
+            and ingestion delays by over 80%.
           </>,
         ],
         images: [],
@@ -147,12 +151,24 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "MS, Data Science",
+        description:
+          <>
+            University of Massachusetts, Dartmouth
+            <br></br>
+            Sept 2024 - May 2026
+            <br></br>
+            GPA: 4.0 / 4.0
+          </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "BTech, Computer Engineering",
+        description: 
+          <>
+            NMIMS University, Mumbai
+            <br></br>
+            July 2017 - Apr 2021
+          </>,
       },
     ],
   },
@@ -161,36 +177,28 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Programming",
+        skill_badges: [
+          "Python", "R", "SQL", "C/C++", "PySpark"
+        ]
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "Data Science & ML",
+        skill_badges: [
+          "Pandas", "NumPy", "Matplotlib", "Scikit Learn", "PyTorch"
+        ]
+      },
+      {
+        title: "Databases",
+        skill_badges: [
+          "PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Chroma", "FAISS"
+        ]
+      },
+      {
+        title: "Cloud & DevOps",
+        skill_badges: [
+          "AWS (Certified Developer & SAA)", "Git", "Docker"
+        ]
       },
     ],
   },
@@ -207,7 +215,7 @@ const blog = {
 
 const work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
