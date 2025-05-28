@@ -1,0 +1,59 @@
+---
+title: "Clustering NYC Neighborhoods for Socioeconomic Insights"
+publishedAt: "April, 2025"
+summary: "A data-driven approach to uncover socioeconomic patterns across New York City."
+images:
+  - "/images/projects/project-04/nyc.jpg"
+  - "/images/projects/project-04/cluster-plot.png"
+  - "/images/projects/project-04/radar-plot.png"
+---
+
+## Overview
+
+In this project, I used clustering techniques to classify over 2,300 NYC census tracts into distinct neighborhood types based on 14 socioeconomic indicators from the 2021 American Community Survey. The goal was to support urban policy planning and resource allocation by identifying latent patterns in demographic and economic conditions across the city.
+
+## Method
+
+After extensive preprocessing — including missing value imputation, log transformation of skewed features, and standardization — I applied the K-means algorithm and evaluated cluster quality using the Elbow Method, Silhouette Score, and Gap Statistic. A 4-cluster solution provided the best balance between interpretability and performance.
+
+## Key Insights
+
+Each cluster revealed meaningful socioeconomic profiles:
+
+- **Stable Middle-Class Neighborhoods**: Lower poverty, older population, stable housing.
+- **High-Need Urban Areas**: High poverty and unemployment, low income, high transit use.
+- **Affluent Urban Neighborhoods**: High income and education, low poverty
+- **Mixed Urban Transition Areas**: Socioeconomically diverse, likely undergoing change.
+
+These insights could guide targeted policy interventions, such as anti-displacement programs, affordable housing, and neighborhood-specific public services.
+
+## Technologies Used
+
+<Grid
+  fillWidth
+  columns="3"
+  mobileColumns="2"
+  gap="16">
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>R Programming</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>K-Means Clustering</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Elbow Method</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Silhouette Score</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>PCA</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Data Visualization</Text>
+  </Column>
+</Grid>
+
+## Challenges and Learnings
+
+TODO

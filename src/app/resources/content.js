@@ -53,8 +53,8 @@ const home = {
   headline: <>Ingestion to Insights. Pipelines to Predictions.</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">S&P 500 - Supervised ML</strong></>,
-    href: "/projects/sp500-ml-project",
+    title: <>Recent project: <strong className="ml-4">RAG - Chat Interface</strong></>,
+    href: "/work/04-rag-chat-interface",
   },
   subline: (
     <>
@@ -87,15 +87,17 @@ const about = {
       <>
         What excites me the most is the intersection of data, systems, and complex challenges. 
         I enjoy taking on ambiguous problems, breaking them down, and building thoughful data-driven solutions that have an impact.
-        With a strong foundation in data engineering, I'm looking to expand my expertise into data science and machine learning.
         <br></br>
         <br></br>
         I've worked in data engineering roles at a technology consulting firm, building and deploying scalable cloud-native data 
-        and analytics solutions for clients across diverse domains - Cybersecurity, Finance, Sports and Entertainment.
+        and analytics solutions for clients across diverse domains - Cybersecurity, Finance, Human Resources, Sports and Entertainment.
         <br></br>
         <br></br>
-        Currently pursuing a Master's program in Data Science, where I'm deeping my knowledge in Statistical Modelling, Machine Learning 
+        Currently pursuing a Master's program in Data Science, where I'm deepening my knowledge in Statistical Modeling, Machine Learning 
         and AI. I apply what I learn through academic and personal projects.
+        <br></br>
+        <br></br>
+        With a strong foundation in data engineering, I'm looking to expand my expertise into data science and machine learning.
       </>
     ),
   },
@@ -113,10 +115,16 @@ const about = {
             resulting in an exponential increase in analyst productivity and 70% cloud cost reduction.
           </>,
           <>
-            Assessed a streaming data pipeline for a cybersecurity firm experiencing performance issues. 
-            Identified immediate fixes to significantly improve throughput in existing system and assisted on a future-state architecture,
-            resulting in a 6 figure long-term engagement with the client for modernization project.
+            Implemented a multi-layered enterprise warehouse solution integrating 50+ tenant databases; enabling automated dashboards
+            for talent acquisition analytics.
           </>,
+          <>
+            Assessed a streaming data pipeline for a cybersecurity firm experiencing performance issues. 
+            Identified immediate fixes to significantly improve throughput and assisted on a future-state architecture.
+          </>,
+          <>
+            Mentored interns; conducted technical interviews; led internal sessions to improve engineering velocity across teams.
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -217,7 +225,7 @@ const work = {
   path: "/work",
   label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

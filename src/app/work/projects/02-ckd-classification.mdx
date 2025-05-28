@@ -1,0 +1,54 @@
+---
+title: "Predictive Modeling of Chronic Kidney Disease"
+publishedAt: "April, 2025"
+summary: "Using Supervised Machine Learning approaches for early CKD detection using clinical and demographic data."
+images:
+  - "/images/projects/project-03/cover-01.jpg"
+---
+
+## Overview
+
+In this project, I developed predictive models to identify patients at risk of Chronic Kidney Disease (CKD) — a silent, progressive condition with major public health impact. Using a clinical dataset of 1,659 patients (from Kaggle), I tackled the significant class imbalance (1,524 CKD cases vs 135 non-CKD) using SMOTE oversampling and class weighting strategies to enhance model fairness.
+
+## Method & Results
+
+implemented and evaluated three models: Logistic Regression, Random Forest, and XGBoost — comparing them across both 80/20 and 50/50 train-test splits. Key metrics included AUC, sensitivity, specificity, and balanced accuracy:
+
+- **Random Forest** consistently achieved the highest sensitivity (up to 99.67%), making it ideal for clinical screening where missing a positive case could be critical.
+- **XGBoost** offered the best balance of performance, with the highest AUC (0.856) and balanced accuracy (66.64%) in the 80/20 split.
+- **Logistic Regression**, while highly interpretable, showed slightly lower sensitivity and specificity compared to ensemble methods.
+
+## Key Insights
+
+The most predictive features — like serum creatinine, glomerular filtration rate, and urinary protein — aligned with known clinical indicators. Despite model tuning, specificity remained a challenge due to the dataset imbalance, revealing opportunities for future work in cost-sensitive learning and dataset expansion.
+
+## Technologies Used
+
+<Grid
+  fillWidth
+  columns="3"
+  mobileColumns="2"
+  gap="16">
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>R Programming</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Clinical Diagnosis</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Logistic Regression</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Random Forests</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>XGBoost</Text>
+  </Column>
+  <Column horizontal="center" border="neutral-alpha-medium" padding="16" radius="m">
+    <Text>Model Evaluation</Text>
+  </Column>
+</Grid>
+
+## Challenges and Learnings
+
+TODO

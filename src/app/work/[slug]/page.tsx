@@ -78,13 +78,15 @@ export default async function Project({
         </Button>
         <Heading variant="display-strong-s">{post.metadata.title}</Heading>
         <Text wrap="balance" variant="body-default-s">{post.metadata.summary}</Text>
-        <SmartLink
+        {post.metadata.link && (
+          <SmartLink
                   suffixIcon="github"
                   style={{ margin: "0", width: "fit-content" }}
                   href={post.metadata.link}
-                >
-                  <Text variant="body-default-s">View project</Text>
-                </SmartLink>
+          >
+            <Text variant="body-default-s">View project</Text>
+          </SmartLink>
+        )}
       </Column>
       {post.metadata.images.length > 0 && (
         <SmartImage
